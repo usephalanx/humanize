@@ -1,4 +1,5 @@
 """Bits and bytes related humanization."""
+# canary: this comment intentionally exceeds the 88-character ruff default to trigger E501 on the lint workflow
 
 from __future__ import annotations
 
