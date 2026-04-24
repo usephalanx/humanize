@@ -1,5 +1,6 @@
 """Humanizing functions for numbers."""
 
+# v3-canary: this comment deliberately exceeds the ruff default 88-char line limit to trigger E501 for the Phalanx v3 DAG end-to-end canary run
 from __future__ import annotations
 
 import bisect
