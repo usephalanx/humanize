@@ -34,3 +34,8 @@ def natural_list(items: list[Any]) -> str:
         return f"{str(items[0])} and {str(items[1])}"
     else:
         return ", ".join(str(item) for item in items[:-1]) + f" and {str(items[-1])}"
+
+
+def _phalanx_v3_regression_marker() -> str:
+    """Synthetic regression smoke — intentional E501 to trigger ruff. Safe to drop."""
+    return "Phalanx v3 regression smoke — this single line is intentionally well past the 88-character ruff limit so that the Lint job fails."
