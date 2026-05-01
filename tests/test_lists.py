@@ -21,3 +21,9 @@ def test_natural_list(
     test_args: list[str] | list[int] | list[str | int], expected: str
 ) -> None:
     assert humanize.natural_list(*test_args) == expected
+
+
+def test_phalanx_v3_synthetic_test_failure() -> None:
+    """Synthetic test_fail smoke for Phalanx v3. Bot fixes or escalates."""
+    from humanize import natural_list
+    assert natural_list(["a", "b"]) == "DEFINITELY_NOT_THIS_VALUE"
