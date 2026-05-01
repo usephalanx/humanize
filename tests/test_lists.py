@@ -22,14 +22,3 @@ def test_natural_list(
 ) -> None:
     assert humanize.natural_list(*test_args) == expected
 
-
-def test_phalanx_v3_synthetic_flake() -> None:
-    """Synthetic flake smoke for Phalanx v3. Tight timing assertion that
-    reliably fails — TL should recognize as a flaky/over-tight timing
-    constraint and remove or relax it. Bot fixes."""
-    import time
-    from humanize import natural_list
-    start = time.perf_counter()
-    natural_list(["a", "b", "c"])
-    elapsed = time.perf_counter() - start
-    assert elapsed < 1e-9, f"natural_list took {elapsed}s — flaky tight bound"
